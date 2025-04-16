@@ -1,6 +1,6 @@
 # Data_Modelling_on_AWS_Databricks_with_Spark_Examples-and-Discussion
 
-### Full code available here: https://github.com/manuelbomi/Data_Modelling_on_AWS_Databricks_with_Spark_Examples-and-Discussion/blob/main/Data_Modelling_on_AWS_Databricks_with_Spark_Examples_%26_Discussion.ipynb
+##### Full code available here: https://github.com/manuelbomi/Data_Modelling_on_AWS_Databricks_with_Spark_Examples-and-Discussion/blob/main/Data_Modelling_on_AWS_Databricks_with_Spark_Examples_%26_Discussion.ipynb
 
 ##### In this submission, we have shown a method by which data can be modelled on Spark using the appropriate data types in lieu of using the 'inferSchema' method. 
 
