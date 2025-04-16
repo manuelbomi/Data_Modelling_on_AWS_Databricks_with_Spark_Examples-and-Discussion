@@ -32,12 +32,7 @@ Modeling the data by defining the schema explicitly can have several advantages 
     Processing Speed: Since their is no automatic inferencing by setting inferSchema to True, processing speed of the data can be faster. This can lead to huge savings in processing costs for large datasets.
     Improved Data Qulity and Accuracy:  Since the exact schema types are known, data will be of improved quality. No mismatcches, and no un-expected data conversion. Thus, it will be easier to document the data types for data governance activities. The data will also be richer, and it can be easily used in model training and code preparation.
  
-
-
-
-
-
-
+#### Here, we show, with the aid of some Spark codes how User Defined Functions (UDFs) can be designed in Spark. (Detailed code is available here: https://github.com/manuelbomi/Data_Modelling_on_AWS_Databricks_with_Spark_Examples-and-Discussion/blob/main/Data_Modelling_on_AWS_Databricks_with_Spark_Examples_%26_Discussion.ipynb)  
 
 
 ![Image](https://github.com/user-attachments/assets/5d7c78f0-24cd-4487-920b-ee19689b3784)
