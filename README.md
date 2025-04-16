@@ -1,5 +1,7 @@
 # Data_Modelling_on_AWS_Databricks_with_Spark_Examples-and-Discussion
 
+### Full code available here: https://github.com/manuelbomi/Data_Modelling_on_AWS_Databricks_with_Spark_Examples-and-Discussion/blob/main/Data_Modelling_on_AWS_Databricks_with_Spark_Examples_%26_Discussion.ipynb
+
 ##### In this submission, we have shown a method by which data can be modelled on Spark using the appropriate data types in lieu of using the 'inferSchema' method. 
 
 inferSchema parameter plays a critical role. It offers a seemingly simple choice: let Spark automatically guess the data types (inferSchema=True) or define them explicitly (inferSchema=False). But the decision between convenience and control can significantly impact your data processing pipeline. This blog dives deeper into inferSchema, its implications, and best practices for optimal data handling.
