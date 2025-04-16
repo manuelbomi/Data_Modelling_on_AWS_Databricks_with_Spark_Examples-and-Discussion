@@ -37,6 +37,6 @@ Modeling the data by defining the schema explicitly can have several advantages 
 
 ![Image](https://github.com/user-attachments/assets/5d7c78f0-24cd-4487-920b-ee19689b3784)
 
-
+#### Here, we show, with the aid of some Spark codes how several data columns can be imploded into a single column (Detailed code is available here: https://github.com/manuelbomi/Data_Modelling_on_AWS_Databricks_with_Spark_Examples-and-Discussion/blob/main/Data_Modelling_on_AWS_Databricks_with_Spark_Examples_%26_Discussion.ipynb) 
 
 ![Image](https://github.com/user-attachments/assets/3b4fa6bf-7d91-4b35-8165-abd9a1e0e094)
