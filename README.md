@@ -2,9 +2,9 @@
 
 ##### Full code available here: https://github.com/manuelbomi/Data_Modelling_on_AWS_Databricks_with_Spark_Examples-and-Discussion/blob/main/Data_Modelling_on_AWS_Databricks_with_Spark_Examples_%26_Discussion.ipynb
 
-##### In this submission, we have shown a manual method by which data can be modelled on Spark using the appropriate data types in lieu of using the 'inferSchema' method. We have also briefly shown (with Spark codes) how the createOrReplaceTempView() and the createGlobalTempView() methods can be used to create temporary views that can be shared among all sessions and keep alive. These temporary views are lazily evaluated and can be used to process petabytes of data just like a Hive table, plus the benefit of using Spark SQL for querying data. 
+##### In this submission, we have shown a manual method by which data can be modelled on Spark using the appropriate data types in lieu of using the 'inferSchema' method. We have also briefly shown (with Spark codes) how the createOrReplaceTempView() and the createGlobalTempView() methods can be used to create temporary views that can be shared among all sessions and keep alive. These temporary views are lazily evaluated and can be used to process petabytes of data just like a Hive table.
 
-##### In addition, we have shown (with Spark codes) how ad-hoc caching can be used during data analysis with Spark. 
+##### In addition, we have shown (with Spark codes) how ad-hoc data caching can be used during data analysis with Spark. 
 
 ##### Also, we have shown (with Spark codes) how User Defined Functions (UDFs) can be designed with Spark. 
 
@@ -13,51 +13,30 @@
 ##### Methods of collating, merging and imploding multiple data columns into a single column are also shown with Spark codes. 
   
 
-#### Challenges with using InferSchema method
-InferSchema (inferSchema=True) works by letting Spark automatically infer or guess the type of the data to be anaylzed. It is a convenient method for initial exploratory data analyses. It allows the data engineer to have a quick idea of the underlying data structure. 
+## Challenges with using InferSchema method
+InferSchema (inferSchema=True) works by letting Spark automatically infer or guess the type of the data to be anaylzed. It is a convenient method for initial exploratory data analyses (EDAs). It allows the data engineer to have a quick idea of the underlying data structure. 
 
+While very convenient to use, especially for initial EDAs, automatic data inference using inferSchema can have some severe drawbacks:
 
-
-
-
-The Catch with Automatic Inference
-
-While convenient, automatic inference can have drawbacks:
-
-    Performance Overhead: Analyzing data to infer types can be time-consuming, especially for large datasets.
-    Inaccurate Inferences: Inconsistent data (e.g., a column containing both numbers and text) can lead to inaccurate data types, causing downstream processing issues.
-    Limited Control: You relinquish control over data quality checks and schema evolution.
-
-Benefits of Manual Schema Definition
-inferSchema=False: This gives you more control. You define the schema beforehand using the StructType API, explicitly specifying the data types for each column. This is crucial for production-grade pipelines where performance and data integrity are paramount.
-
-By defining the schema explicitly, you gain several advantages:
-
-    Improved Performance: Avoids the overhead of inference, leading to faster processing.
-    Enhanced Accuracy: Ensures data types are what you expect, preventing unexpected conversions.
-    Data Quality and Validation: Allows you to incorporate data validation logic within the schema definition.
-    Explicitness and Documentation: Clearly defines the expected data structure for better code clarity and collaboration.
-
-Choosing the Right Approach: A Balancing Act
-
-The optimal choice depends on your specific use case:
-
-Use Automatic Inference for:
-
-    Exploratory data analysis (EDA) when you’re unfamiliar with the data structure.
-    Small datasets where the inference overhead is negligible.
-
-Opt for Manual Schema Definition for:
-
-    Production pipelines where performance and data quality are critical.
-    Large datasets where accurate data type inferences are essential.
-    Scenarios with potential inconsistencies or mixed data types within columns.
-
-Beyond inferSchema: Optimizing Your Data Pipeline
-
-
+    Schema Evolution Issues: When inferSchema is used to detect data types, the engineer will loose control over schema specification. It may be harder down the road to enforce data types and it will be harder still to eveolve the data types when new data are added to the initial data set. 
+    Large Performance Overhead: When inferSchema is used to detect the data types, each records in the data may analyzed. This is very compute intensive and time consuming for large data sets.
+    Wrong Inferencing: If some columns of data have mixed data types (for example a column that have integer and string data types mixed togethe), the inferSchema method can come up with an inaccurate data type in the schema  details. This can lead to huge errors and adverse processing issues down the road. 
+    
+A method of manually specifiying the schema and data type using Spark StructType() method is shown in the Fig below. The full code can be obtained in the code repo. 
 
 ![Image](https://github.com/user-attachments/assets/9c90097c-6176-4def-9c94-5cb3fc9c6cd0)
+
+#### Benefits of Manually Specifying the Schema 
+Modeling the data by defining the schema explicitly can have several advantages including:
+
+    Processing Speed: Since their is no automatic inferencing by setting inferSchema to True, processing speed of the data can be faster. This can lead to huge savings in processing costs for large datasets.
+    Improved Data Qulity and Accuracy:  Since the exact schema types are known, data will be of improved quality. No mismatcches, and no un-expected data conversion. Thus, it will be easier to document the data types for data governance activities. The data will also be richer, and it can be easily used in model training and code preparation.
+ 
+
+
+
+
+
 
 
 
