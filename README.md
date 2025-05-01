@@ -34,7 +34,27 @@ Modeling the data by defining the schema explicitly can have several advantages 
  
 #### Here, we show, with the aid of some Spark codes how User Defined Functions (UDFs) can be designed in Spark. (Detailed code is available here: https://github.com/manuelbomi/Data_Modelling_on_AWS_Databricks_with_Spark_Examples-and-Discussion/blob/main/Data_Modelling_on_AWS_Databricks_with_Spark_Examples_%26_Discussion.ipynb)  
 
+ ---
+Thank you for reading through
 
+---
+
+Author's Background
+
+```
+> [!NOTE]
+Author's Name:  Emmanuel Oyekanlu
+Skillset:   I have experience spanning several years in developing scalable enterprise data pipelines, architecting enterprise
+data solutions, deep learning and LLM applications as well as deploying solutions (apps) on-prem and in the cloud.
+I can be reached through: manuelbomi@yahoo.com
+Website:  http://emmanueloyekanlu.com/
+Publications:  https://scholar.google.com/citations?user=S-jTMfkAAAAJ&hl=en
+LinkedIn:  https://www.linkedin.com/in/emmanuel-oyekanlu-6ba98616
+Github:  https://github.com/manuelbomi
+
+```
+
+[![Icons](https://skillicons.dev/icons?i=aws,azure,gcp,scala,mongodb,redis,cassandra,kafka,anaconda,matlab,nodejs,django,py,c,anaconda,git,github,mysql,docker,kubernetes&theme=dark)](https://skillicons.dev)
 ![Image](https://github.com/user-attachments/assets/5d7c78f0-24cd-4487-920b-ee19689b3784)
 
 #### Here, we show, with the aid of some Spark codes how several data columns can be imploded into a single column (Detailed code is available here: https://github.com/manuelbomi/Data_Modelling_on_AWS_Databricks_with_Spark_Examples-and-Discussion/blob/main/Data_Modelling_on_AWS_Databricks_with_Spark_Examples_%26_Discussion.ipynb) 
